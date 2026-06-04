@@ -1,33 +1,15 @@
-mixed-port: 7890
-allow-lan: true
-mode: rule
-log-level: info
-
-ipv6: false
-
-dns:
-  enable: true
-  ipv6: false
-  enhanced-mode: redir-host
-  nameserver:
-    - 1.1.1.1
-    - 1.0.0.1
-
-tun:
-  enable: true
-  stack: system
-  auto-route: true
-  auto-detect-interface: true
-
 proxies:
   - name: AWS-WG
     type: wireguard
     server: 15.164.129.70
     port: 51820
+
     ip: 10.66.66.2
+
     private-key: OD+qtxd3BT+1micj9rA4NZMQe2V6AtQGUzmJgHG7f04=
     public-key: cm5y4TlqKNEIeldYWwlLD/Aju0By9Cz/azh0YsoX8QY=
     pre-shared-key: ZPX7uk4SyKhnebJbOFJYchlKBvh++1qcbyGd2tEoHuY=
+
     mtu: 1420
     udp: true
 
@@ -38,5 +20,4 @@ proxy-groups:
       - AWS-WG
 
 rules:
-  - GEOIP,CN,DIRECT
   - MATCH,PROXY
