@@ -28,10 +28,8 @@ proxies:
 
 * name: AWS-WG
   type: wireguard
-
   server: 15.164.129.70
   port: 51820
-
   ip: 10.66.66.2
 
   private-key: OD+qtxd3BT+1micj9rA4NZMQe2V6AtQGUzmJgHG7f04=
@@ -39,7 +37,6 @@ proxies:
   pre-shared-key: ZPX7uk4SyKhnebJbOFJYchlKBvh++1qcbyGd2tEoHuY=
 
   mtu: 1280
-
   udp: true
 
 proxy-groups:
