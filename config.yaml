@@ -1,23 +1,17 @@
 proxies:
-  - name: AWS-WG
-    type: wireguard
-    server: 15.164.129.70
-    port: 51820
-
-    ip: 10.66.66.2
-
-    private-key: OD+qtxd3BT+1micj9rA4NZMQe2V6AtQGUzmJgHG7f04=
-    public-key: cm5y4TlqKNEIeldYWwlLD/Aju0By9Cz/azh0YsoX8QY=
-    pre-shared-key: ZPX7uk4SyKhnebJbOFJYchlKBvh++1qcbyGd2tEoHuY=
-
-    mtu: 1420
+  - name: "AWS-Hysteria"
+    type: hysteria2
+    server: toxqiu.ccwu.cc
+    port: 443
+    password: 8zPJSHleGlmXaDFsm2FPKPJP
+    sni: toxqiu.ccwu.cc
     udp: true
 
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - AWS-WG
+      - AWS-Hysteria
 
 rules:
   - MATCH,PROXY
