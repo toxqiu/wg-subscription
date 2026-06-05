@@ -1,10 +1,15 @@
+# ------------------------
+# Hysteria2 通用订阅 YAML
+# ------------------------
 proxies:
   - name: AWS-HY2
     type: hysteria2
-    server: toxqiu.ccwu.cc
+    server: 43.206.130.204   # 东京 EC2 公网 IP
     port: 443
     password: 8zPJSHleGlmXaDFsm2FPKPJP
-    sni: toxqiu.ccwu.cc
+    sni: toxqiu.ccwu.cc      # TLS 校验证书域名
+    protocol: tcp            # 强制 TCP-only，兼容 iPhone Nextin
+    alpn: h3                 # 可选，使用 HTTP/3 协议提升兼容性
 
 proxy-groups:
   - name: PROXY
