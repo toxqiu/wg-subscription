@@ -1,10 +1,15 @@
 proxies:
   - name: AWS-HY2
     type: hysteria2
-    server: toxqiu.ccwu.cc
-    port: 2053
+    server: toxqiu.ccwu.cc      # 你的域名
+    port: 2053                    # Hysteria2 端口
     password: 8zPJSHleGlmXaDFsm2FPKPJP
-    sni: toxqiu.ccwu.cc
+    sni: toxqiu.ccwu.cc         # 与证书一致
+    skip-cert-verify: true      # 避免证书问题
+    udp: true                    # 强制使用 UDP
+    # IPv6 默认关闭（Nextin 会自动忽略 IPv6 请求）
+    # MTU 不设置，避免客户端报错
+    # obfs 不设置，保持最兼容模式
 
 proxy-groups:
   - name: PROXY
