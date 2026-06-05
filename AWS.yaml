@@ -2,7 +2,7 @@ proxies:
   - name: AWS-HY2
     type: hysteria2
     server: toxqiu.ccwu.cc
-    port: 443
+    port: 2053
     password: 8zPJSHleGlmXaDFsm2FPKPJP
     sni: toxqiu.ccwu.cc
 
