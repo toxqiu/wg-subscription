@@ -4,7 +4,7 @@ proxies:
     server: toxqiu.ccwu.cc
     port: 443
     password: 8zPJSHleGlmXaDFsm2FPKPJP
-    sni: 43.206.130.204
+    sni: toxqiu.ccwu.cc
 
 proxy-groups:
   - name: PROXY
