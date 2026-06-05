@@ -1,0 +1,16 @@
+proxies:
+  - name: AWS-HY2
+    type: hysteria2
+    server: toxqiu.ccwu.cc
+    port: 443
+    password: 8zPJSHleGlmXaDFsm2FPKPJP
+    sni: toxqiu.ccwu.cc
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - AWS-HY2
+
+rules:
+  - MATCH,PROXY
