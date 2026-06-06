@@ -23,7 +23,7 @@ proxies:
   - name: "AWS-Tokyo-HY2"
     type: hysteria2
     server: 3.115.13.244
-    port: 33445
+    port: 8443
     password: 0tddw4sks6bxyjvt
     sni: example.com
     skip-cert-verify: true
