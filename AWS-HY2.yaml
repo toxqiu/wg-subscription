@@ -25,8 +25,8 @@ proxies:
     server: 3.115.13.244
     port: 8443
     password: 0tddw4sks6bxyjvt
-    sni: example.com
-    skip-cert-verify: true
+    sni: toxqiu.ccwu.cc
+    skip-cert-verify: false
     fast-open: true
 
 proxy-groups:
