@@ -3,21 +3,9 @@ socks-port: 7891
 allow-lan: true
 mode: rule
 log-level: info
-ipv6: false
-
-dns:
-  enable: true
-  listen: 0.0.0.0:1053
-  ipv6: false
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  nameserver:
-    - 223.5.5.5
-  fallback:
-    - 8.8.8.8
 
 proxies:
-  - name: "AWS-Tokyo (VLESS)"
+  - name: "AWS-Tokyo-VLESS"
     type: vless
     server: 3.115.13.244
     port: 443
@@ -32,7 +20,7 @@ proxies:
       public-key: 4BifCYOHHX-gqaw5hSQaqI34uRCSj3mDPpw3n9Ds2ho
       short-id: 4b914e338fc3c6
 
-  - name: "AWS-Tokyo (HY2)"
+  - name: "AWS-Tokyo-HY2"
     type: hysteria2
     server: 3.115.13.244
     port: 33445
@@ -45,8 +33,8 @@ proxy-groups:
   - name: "🚀 节点选择"
     type: select
     proxies:
-      - "AWS-Tokyo (HY2)"
-      - "AWS-Tokyo (VLESS)"
+      - "AWS-Tokyo-HY2"
+      - "AWS-Tokyo-VLESS"
       - DIRECT
 
 rules:
